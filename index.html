@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - [Sylfans]]</title>
+    
+    <!-- Memuat Tailwind CSS --><script src="http://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat Google Font (Inter) --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Menerapkan font Inter sebagai font default */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Gradien latar belakang global */
+            background: linear-gradient(to bottom right, #0e0e0e, #1a2e00); /* Hitam ke Hijau Sangat Gelap */
+        }
+        
+        /* Efek smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Menyembunyikan scrollbar untuk browser tertentu */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none; /* IE dan Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+    </style>
+</head>
+<body class="text-gray-100 antialiased">
+
+    <!-- ===== HEADER / NAVIGASI ===== --><header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700/50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo / Nama --><a href="#" class="text-2xl font-bold text-white hover:text-green-400 transition-colors">
+                    Sylfanss.Etc
+                </a>
+                
+                <!-- Navigasi Desktop --><div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-gray-300 hover:text-green-400 transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-gray-300 hover:text-green-400 transition-colors">Tentang</a>
+                    <a href="#proyek" class="text-gray-300 hover:text-green-400 transition-colors">Proyek</a>
+                    <a href="#kontak" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md font-medium transition-colors">
+                        Hubungi Saya
+                    </a>
+                </div>
+                
+                <!-- Tombol Menu Mobile --><div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Menu Mobile (Dropdown) --><div id="mobile-menu" class="md:hidden hidden bg-gray-800">
+            <a href="#beranda" class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white">Beranda</a>
+            <a href="#tentang" class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white">Tentang</a>
+            <a href="#proyek" class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white">Proyek</a>
+            <a href="#kontak" class="block px-4 py-3 bg-green-600 text-white font-medium m-2 rounded-md text-center">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO SECTION ===== --><section id="beranda" class="min-h-screen flex items-center pt-20 md:pt-0" style="background: radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.15), transparent 40%), radial-gradient(circle at 80% 30%, rgba(52, 211, 153, 0.1), transparent 40%);">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <!-- Teks Hero --><div class="flex flex-col space-y-6 text-center md:text-left">
+                        <span class="text-green-400 font-semibold text-lg"> </span>
+                        <h1 class="text-5xl lg:text-5xl font-bold tracking-tighter text-white">
+                            Sylfan Karunia Ilyasa
+                        </h1>
+                        <h2 class="text-2xl lg:text-1xl font-semibold text-gray-300">
+                            Begginer Web Dev
+                        </h2>
+                        <p class="text-lg text-gray-400 max-w-lg mx-auto md:mx-0">
+                            Saya mengubah ide-ide kompleks menjadi aplikasi web yang indah, fungsional, dan berpusat pada pengguna.
+                        </p>
+                        <!-- Tombol CTA --><div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4 justify-center md:justify-start">
+                            <a href="#proyek" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-md font-medium text-lg transition-colors text-center">
+                                Lihat Proyek Saya
+                            </a>
+                            <a href="#kontak" class="bg-gray-700 hover:bg-gray-600 text-gray-100 px-8 py-3 rounded-md font-medium text-lg transition-colors text-center">
+                                Hubungi Saya
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Gambar Hero --><div class="flex justify-center">
+                        <img 
+                            src="public/kkkk.jpg"
+                            alt="Foto [Nama Anda]"
+                            class="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-full border-4 border-green-500/50 shadow-2xl shadow-green-500/10"
+                            onerror="this.src='https://placehold.co/600x600/1F2937/FFFFFF?text=Gagal+Muat'"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TENTANG SAYA (SINGKAT) ===== --><section id="tentang" class="py-24 bg-gray-900/50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="flex justify-center">
+                        <img 
+                            src="public/ssds.jpg"
+                            alt="Foto aksi [Nama Anda]"
+                            class="rounded-lg shadow-lg"
+                            onerror="this.src= 'https://placehold.co/600x450/1F2937/FFFFFF?text=Gagal+Muat'"
+                        >
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">Tentang Saya</h2>
+                        <p class="text-lg text-gray-400 mb-4">
+                            Halo! Saya Sylfan, seorang Programmer yang berbasis di Tasikmadu dengan pengalaman lebih dari 1 tahun. Saya memiliki Keinginan mendalam Untuk Mempelajari Website dan
+                        </p>
+                        <p class="text-lg text-gray-400 mb-6">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== KEAHLIAN ===== -->
+<section id="keahlian" class="py-24 bg-gray-800/50 flex flex-col items-center justify-center">
+    <div class="max-w-6xl w-full px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center mb-12 text-white">Keahlian Saya</h2>
+      
+      <!-- Wrapper grid tengah -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+        
+        <!-- Kartu Keahlian 1 -->
+        <div class="flex flex-col items-center p-6 bg-gray-900/70 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-green-500/20">
+          <div class="p-4 bg-green-500/20 rounded-full mb-4">
+            <i data-lucide="layout-template" class="w-10 h-10 text-green-300"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Web Dev</h3>
+          <p class="text-gray-400 text-sm text-center mt-2">HTML, CSS, JS</p>
+        </div>
+  
+        <!-- Kartu Keahlian 2 -->
+        <div class="flex flex-col items-center p-6 bg-gray-900/70 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-green-500/20">
+          <div class="p-4 bg-green-500/20 rounded-full mb-4">
+            <i data-lucide="code-2" class="w-10 h-10 text-green-300"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white">AI Web Dev</h3>
+          <p class="text-gray-400 text-sm text-center mt-2">Lovable, Gemini Canvas</p>
+        </div>
+  
+        <!-- Kartu Keahlian 3 -->
+        <div class="flex flex-col items-center p-6 bg-gray-900/70 rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-green-500/20">
+          <div class="p-4 bg-green-500/20 rounded-full mb-4">
+            <i data-lucide="database" class="w-10 h-10 text-green-300"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Database</h3>
+          <p class="text-gray-400 text-sm text-center mt-2">SQL, Supabase</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+        <!-- ===== PROYEK UNGGULAN ===== --><section id="proyek" class="py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Proyek Unggulan</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Kartu Proyek 1 - Web Ai Guru (Diperbarui) --><div class="bg-gray-800/70 rounded-lg shadow-lg overflow-hidden transition-all hover:shadow-xl hover:shadow-green-500/30 hover:scale-[1.02]">
+                        <!-- Mengganti Gambar dengan Judul Teks --><div class="flex items-center justify-center h-48 bg-gray-700/50">
+                            <h3 class="text-2xl font-bold text-white text-center px-4">Promt Ai Dan Web Ai</h3>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-white mb-3 sr-only">Promt Ai Dan Web Ai</h3> <!-- Judul asli disembunyikan untuk screen reader --><div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-900/50 text-green-300 text-xs font-medium rounded-full px-3 py-1">Lovable</span>
+                                <span class="bg-green-900/50 text-green-300 text-xs font-medium rounded-full px-3 py-1">Vercel</span>
+                                <span class="bg-green-900/50 text-green-300 text-xs font-medium rounded-full px-3 py-1">Supabase</span>
+                                <span class="bg-green-900/50 text-green-300 text-xs font-medium rounded-full px-3 py-1">GitHub</span>
+                            </div>
+                            <p class="text-gray-400 mb-4">
+                                Platform berbasis AI untuk, dibangun menggunakan teknologi modern untuk pengalaman pengguna yang intuitif dan responsif.
+                            </p>
+                            <a href="https://ai-guru-hub.vercel.app/" target="_blank" class="text-green-400 font-medium hover:underline">
+                                Kunjungi Web <i data-lucide="external-link" class="inline w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Kartu Proyek 2 - Aplikasi Prompt Generator (Revisi Tag & Deskripsi) --><div class="bg-gray-800/70 rounded-lg shadow-lg overflow-hidden transition-all hover:shadow-xl hover:shadow-green-500/30 hover:scale-[1.02]">
+                        <!-- Mengganti Gambar dengan Judul Teks --><div class="flex items-center justify-center h-48 bg-gray-700/50">
+                            <h3 class="text-2xl font-bold text-white text-center px-4">Aplikasi Prompt Generator</h3>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-white mb-3 sr-only">Web Promt Generator</h3> <!-- Judul asli disembunyikan untuk screen reader --><div class="flex flex-wrap gap-2 mb-4">
+                                <!-- Tags yang lebih relevan untuk teknologi Full-Stack dan AI -->
+                                <span class="bg-green-900/50 text-green-300 text-xs font-medium rounded-full px-3 py-1">Gemini</span>
+                                <span class="bg-green-900/50 text-green-300 text-xs font-medium rounded-full px-3 py-1">VsCode</span>
+                                <span class="bg-green-900/50 text-green-300 text-xs font-medium rounded-full px-3 py-1">Vercel</span>
+                            </div>
+                            <p class="text-gray-400 mb-4">
+                                Web yang dirancang untuk membantu pengguna membuat prompt yang optimal dan kreatif, Didukung oleh gemini ai dan di hosting di vercel
+                            </p>
+                            <a href="https://ai-helper-gray.vercel.app/" class="text-green-400 font-medium hover:underline">
+                                Kunjungi Web <i data-lucide="external-link" class="inline w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Kartu Proyek 3 - Desain Portofolio UI/UX (Revisi Judul, Tag & Deskripsi) --><div class="bg-gray-800/70 rounded-lg shadow-lg overflow-hidden transition-all hover:shadow-xl hover:shadow-green-500/30 hover:scale-[1.02]">
+                        <!-- Mengganti Gambar dengan Judul Teks (Judul diperjelas) --><div class="flex items-center justify-center h-48 bg-gray-700/50">
+                            <h3 class="text-2xl font-bold text-white text-center px-4">Web Portofolio Pribadi</h3>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-white mb-3 sr-only">Web Portofolio</h3> <!-- Judul asli disembunyikan untuk screen reader --><div class="flex flex-wrap gap-2 mb-4">
+                                <!-- Tags yang relevan untuk desain UI/UX -->
+                                <span class="bg-green-900/50 text-green-300 text-xs font-medium rounded-full px-3 py-1">Gemini</span>
+                                <span class="bg-green-900/50 text-green-300 text-xs font-medium rounded-full px-3 py-1">VsCode</span>
+                                <span class="bg-green-900/50 text-green-300 text-xs font-medium rounded-full px-3 py-1">....</span>
+                            </div>
+                            <p class="text-gray-400 mb-4">
+                                Proyek tentang Portofolio Pibadi Untuk kepentingan pribadi
+                            </p>
+                            <a href="#" class="text-green-400 font-medium hover:underline">
+                                Lihat Portofolio <i data-lucide="external-link" class="inline w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CALL TO ACTION (CTA) ===== --><section id="kontak" class="py-24 bg-green-90/30">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">
+                    Mari Bekerja Sama
+                </h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    Saya selalu terbuka untuk mendiskusikan proyek baru, ide kreatif, atau peluang untuk menjadi bagian dari visi Anda. Punya pertanyaan? Jangan ragu untuk menghubungi.
+                </p>
+                <a href="https://wa.me/6282171334987" class="bg-white text-gray-900 px-10 py-4 rounded-md font-bold text-lg hover:bg-gray-200 transition-colors">
+                    Mulai Percakapan
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Gunakan link ini di bagian <head> untuk ikon Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!--Footer-->
+<footer style="
+  background-color: #111827;
+  color: #e5e7eb;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+">
+  <!-- Navigasi -->
+  <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+    <a href="#beranda" style="color: #e5e7eb; text-decoration: none; font-weight: 500;">Beranda</a>
+    <a href="#tentang" style="color: #e5e7eb; text-decoration: none; font-weight: 500;">Tentang</a>
+    <a href="#proyek" style="color: #e5e7eb; text-decoration: none; font-weight: 500;">Proyek</a>
+  </div>
+
+  <!-- Tombol Sosial Media -->
+  <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 20px;">
+    <a href="https://github.com/SYLFAn-arch" target="_blank" style="
+      background-color: #24292e;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s;
+    ">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+
+    <a href="https://wa.me/6282171334987" target="_blank" style="
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s;
+    ">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+  </div>
+
+  <!-- Copyright -->
+  <div style="font-size: 14px; color: #9ca3af;">
+    &copy; 2025 Sylfan Karunia I. | Semua Hak Dilindungi
+  </div>
+</footer>
+  
+    <!-- Memuat Lucide Icons --><script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide.js"></script>
+    
+    <script>
+        // Menunggu hingga seluruh halaman (termasuk skrip eksternal) dimuat
+        window.addEventListener('load', (event) => {
+
+            function initializeLucide(attempt = 1) {
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                    return true;
+                }
+                
+                // FIX: Meningkatkan jumlah percobaan maksimum dari 10 menjadi 20 untuk memberi waktu lebih lama bagi skrip Lucide untuk dimuat.
+                const maxAttempts = 20; 
+                if (attempt < maxAttempts) {
+                    // Coba lagi dalam waktu singkat (e.g., 200ms)
+                    // Menggunakan setTimeout untuk polling
+                    setTimeout(() => initializeLucide(attempt + 1), 200);
+                } else {
+                    console.error('Lucide script masih gagal dimuat setelah 20 kali percobaan. Periksa koneksi atau URL CDN.');
+                }
+                return false;
+            }
+
+            // Inisialisasi Lucide dengan mekanisme coba ulang
+            initializeLucide();
+            
+            // Skrip untuk toggle menu mobile
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    // Ganti ikon menu (menu/x)
+                    const icon = menuButton.querySelector('i');
+                    if (mobileMenu.classList.contains('hidden')) {
+                        icon.setAttribute('data-lucide', 'menu');
+                    } else {
+                        icon.setAttribute('data-lucide', 'x');
+                    }
+                    
+                    // Panggil createIcons untuk merender ikon menu yang diubah
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons(); 
+                    }
+                });
+            }
+
+            // Tutup menu mobile saat link di-klik
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu && menuButton) {
+                        mobileMenu.classList.add('hidden');
+                        menuButton.querySelector('i').setAttribute('data-lucide', 'menu');
+                        
+                        // Memeriksa lagi sebelum memanggil createIcons
+                        if (typeof lucide !== 'undefined') {
+                            lucide.createIcons();
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
